@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Longitu de Caractee</title>
+    <script type="text/javascript">
+ 
+
+    
+    function validarCampo2(form) {
+            var x = form.cantidad.value.length;
+
+           
+
+            if (x > 6) {
+
+                alert("Debes escribir un maximo de 6 letras");
+                form.cantidad.focus(); 
+                x = form.cantidad.value=""; return x;
+            }
+
+        }
+    
+    </script>
+</head>
+
+<body>
+    <form>
+        
+         <input type="text" name="cantidad">
+           <br/>
+       
+          <br/>
+      <input type="button" value="Enviar2" id="boton2" onClick=validarCampo2(this.form)>
+    </form>
+</body>
+
+</html>

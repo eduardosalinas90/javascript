@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tipos de eventos</title>
+    
+</head>
+
+<body onload="hola()">
+    <button id="boton1" onclick='hola()'>Evento Atributo</button>
+    <button onclick="hola()">Evento DOM</button>
+    <button id="boton3">Evento listener</button>
+    <script type="text/javascript">
+    onload = function() {
+
+
+        document.getElementById("boton3").addEventListener('click', hola);
+        document.getElementById("boton1").onclick= hola;
+
+        function hola() {
+
+            alert("Hola Mundo");
+        }
+
+
+
+
+    }
+    </script>
+</body>
+
+</html>

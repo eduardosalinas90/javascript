@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validando Checkbox</title>
+
+	<script type="text/javascript">
+	     function enviar(form){
+      if ((boletin.alta.checked == true) && (boletin.baja.checked == true))
+    { alert("Por favor, marca una sola casilla"); return true; }
+			
+			}
+		
+	</script>
+</head>
+<body>
+
+<form name="boletin" method="get" action="#">
+	
+<input type="text" name="correo" placeholder="Introduzca su correo">
+<input type="checkbox" name="alta" value="on"> Darse de Alta <br/>
+<input type="checkbox" name="baja" value="on"> Darse de Baja <br/>
+<input type="button" value="Enviar" onClick="enviar(this.form)">
+</form>
+
+</body>
+</html>

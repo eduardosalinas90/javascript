@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evento onKeyUp</title>
+
+	
+</head>
+<body>
+
+<script type="text/javascript">
+		
+		function mostrar(form){
+  
+       
+      datos.campo1.value = datos.campo1.value.toUpperCase();
+        datos.campo2.value = datos.campo1.value;
+		}
+	</script>
+<form name="datos">
+	
+	<input type="text" name="campo1" onKeyUp="mostrar(this.form)">
+	<br/>
+	<input type="text" name="campo2" readonly="readonly">
+</form>
+
+
+
+</body>
+</html>

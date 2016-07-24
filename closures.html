@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Closures</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+var inicio = function() {
+
+	var valor = 0;
+
+	function cambiarValor(num) {
+
+		valor += num;
+	}
+
+	return {
+
+		incrementar: function(num) {
+
+			cambiarValor(num);
+		},
+
+		descrementar: function(num) {
+
+			cambiarValor(num); 
+		},
+
+		mostrarValor: function() {
+
+			return  valor;
+		}
+
+	}
+}
+
+var obj = inicio();
+obj.incrementar(2);
+obj.incrementar(5);
+obj.descrementar(-2);
+
+console.log("El Valor es : "+obj.mostrarValor());
+
+</script>
+
+</body>
+</html>

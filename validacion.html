@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Validacion</title>
+    <script type="text/javascript">
+    function validar(form) {
+
+        var n = form.nombre.value;
+        var d = form.direccion.value;
+        var indice = form.opciones.selectedIndex;
+        var tele= form.tele.value;
+        if (n == null || n.length == 0 || /^\s+$/.test(n)) {
+            alert("Debe rellenar este campo");
+            form.nombre.focus();
+            return false;
+        }
+
+        if (d == "") {
+
+            alert("Debe rellenar este campo direccion");
+            form.direccion.focus();
+            return false;
+        }
+       
+
+if(!(/^\+\d{2}\s\d{11}$/.test(tele))) {
+	   alert("Prefijo internacional\n (+ seguido de 2 o 3 cifras), espacio en blanco y 9 cifras consecutivas");
+  return false;
+}
+
+
+        if (indice == null || indice == 0) {
+            alert("Debe seleccionar una opcion");
+
+            return false;
+        }
+
+        
+
+        return true;
+
+    }
+    </script>
+</head>
+
+<body>
+    <form name="datos" onsubmit="return validar(this)">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre">
+        <br/>
+        <label for="direccion">Direccion</label>
+        <input type="text" name="direccion">
+        <br/>
+        <label for="tele">Telefono</label>
+        <input type="text" name="tele">
+        <select id="opciones" name="opciones">
+            <option value="">- Selecciona un valor -</option>
+            <option value="1">Primer valor</option>
+            <option value="2">Segundo valor</option>
+            <option value="3">Tercer valor</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
